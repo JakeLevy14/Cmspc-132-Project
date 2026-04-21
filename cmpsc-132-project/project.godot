@@ -10,6 +10,20 @@ config_version=5
 
 [application]
 
-config/name="Cmpsc 132 Project"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/name="Cmpsc 132 project"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/py4godot/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
