@@ -1,36 +1,21 @@
 [gd_scene format=3 uid="uid://dblyctf2tv4j1"]
 
-[ext_resource type="Script" path="res://main.py" id="1_ig7tw"]
+[ext_resource type="Script" path="res://NumberGuessingGame.py" id="1_ig7tw"]
 
 [node name="Main" type="Node2D" unique_id=1096399989]
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
+
+[node name="NumberGuessingGame" type="Node2D" parent="." unique_id=1931191278]
 script = ExtResource("1_ig7tw")
-test_int = 5
-test_float = 5.2
-test_bool = true
-test_vector = Vector3(1, 2, 3)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=542004997]
+offset_right = 1145.0
+offset_bottom = 650.0
+color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1266945904]
+offset_left = 411.0
+offset_top = 211.0
+offset_right = 646.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 86
+metadata/_edit_use_anchors_ = true
