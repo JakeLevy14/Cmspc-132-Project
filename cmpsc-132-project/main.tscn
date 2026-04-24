@@ -1,21 +1,108 @@
 [gd_scene format=3 uid="uid://dblyctf2tv4j1"]
 
 [ext_resource type="Script" path="res://NumberGuessingGame.py" id="1_ig7tw"]
+[ext_resource type="Theme" uid="uid://b3klx57slj0l3" path="res://soft_retro/soft_retro.tres" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1096399989]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=609218458]
+
+[node name="Input" type="SpinBox" parent="CanvasLayer" unique_id=857342128]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.99994
+offset_top = -79.0
+offset_right = -70.49994
+offset_bottom = -58.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.384299, 4.384299)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_0xm2m")
+theme_override_colors/up_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_constants/buttons_vertical_separation = 0
+theme_override_constants/field_and_buttons_separation = 0
+theme_override_constants/buttons_width = 0
+theme_override_constants/set_min_buttons_width_from_icons = 0
+rounded = true
+alignment = 1
+
+[node name="HintLabel" type="Label" parent="CanvasLayer" unique_id=1266945904]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.0
+offset_top = 5.0
+offset_right = 118.0
+offset_bottom = 224.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 86
+text = "debug
+"
+
+[node name="GuessesRemaining" type="Label" parent="CanvasLayer" unique_id=988144612]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.99997
+offset_top = 161.0
+offset_right = -63.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.109388, 4.4973383)
+size_flags_horizontal = 4
+theme = ExtResource("2_0xm2m")
+text = "debug
+"
+
 [node name="NumberGuessingGame" type="Node2D" parent="." unique_id=1931191278]
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
 script = ExtResource("1_ig7tw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=542004997]
+[node name="Background" type="ColorRect" parent="." unique_id=542004997]
 offset_right = 1145.0
 offset_bottom = 650.0
-color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+color = Color(0.5679126, 0.43531835, 0.3673035, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1266945904]
-offset_left = 411.0
-offset_top = 211.0
-offset_right = 646.0
-offset_bottom = 394.0
-theme_override_font_sizes/font_size = 86
-metadata/_edit_use_anchors_ = true
+[connection signal="changed" from="CanvasLayer/Input" to="NumberGuessingGame" method="_on_input_changed"]
