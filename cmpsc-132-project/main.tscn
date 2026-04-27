@@ -1,75 +1,13 @@
 [gd_scene format=3 uid="uid://dblyctf2tv4j1"]
 
 [ext_resource type="Script" path="res://NumberGuessingGame.py" id="1_ig7tw"]
-[ext_resource type="Theme" uid="uid://b3klx57slj0l3" path="res://soft_retro/soft_retro.tres" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dp7mq7mnvsgcd" path="res://assets/Uparrow.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bppfwi68j2yed" path="res://assets/Down Arrow.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://0nujh8l04lbk" path="res://assets/Badmark.png" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://f1a45kgfkimj" path="res://assets/Checkmark.png" id="4_lquwl"]
+[ext_resource type="Theme" uid="uid://b3klx57slj0l3" path="res://soft_retro/soft_retro.tres" id="5_272bh"]
 
 [node name="Main" type="Node2D" unique_id=1096399989]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=609218458]
-
-[node name="Input" type="SpinBox" parent="CanvasLayer" unique_id=857342128]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -142.99994
-offset_top = -79.0
-offset_right = -70.49994
-offset_bottom = -58.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4.384299, 4.384299)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_0xm2m")
-theme_override_colors/up_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/up_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/up_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/up_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/down_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/down_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/down_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_colors/down_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
-theme_override_constants/buttons_vertical_separation = 0
-theme_override_constants/field_and_buttons_separation = 0
-theme_override_constants/buttons_width = 0
-theme_override_constants/set_min_buttons_width_from_icons = 0
-rounded = true
-alignment = 1
-
-[node name="HintLabel" type="Label" parent="CanvasLayer" unique_id=1266945904]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -131.0
-offset_top = 5.0
-offset_right = 118.0
-offset_bottom = 224.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-theme = ExtResource("2_0xm2m")
-theme_override_font_sizes/font_size = 86
-text = "debug
-"
-
-[node name="GuessesRemaining" type="Label" parent="CanvasLayer" unique_id=988144612]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -109.99997
-offset_top = 161.0
-offset_right = -63.0
-offset_bottom = 206.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(5.109388, 4.4973383)
-size_flags_horizontal = 4
-theme = ExtResource("2_0xm2m")
-text = "debug
-"
 
 [node name="NumberGuessingGame" type="Node2D" parent="." unique_id=1931191278]
 unique_name_in_owner = false
@@ -100,9 +38,296 @@ scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_ig7tw")
 
+[node name="DifficultyLayer" type="CanvasLayer" parent="." unique_id=1091055457]
+visible = false
+
+[node name="DifficultyLabel" type="Label" parent="DifficultyLayer" unique_id=1625894229]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -626.0
+offset_top = 80.0
+offset_right = 604.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 83
+text = "Difficulty"
+horizontal_alignment = 1
+
+[node name="EasyLabel" type="Label" parent="DifficultyLayer" unique_id=2120761615]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1019.0
+offset_top = 415.0
+offset_right = 211.0
+offset_bottom = 586.0
+grow_horizontal = 2
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 67
+text = "0-50
+7 Guesses"
+horizontal_alignment = 1
+
+[node name="NormalLabel" type="Label" parent="DifficultyLayer" unique_id=1031965890]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -618.0
+offset_top = 415.0
+offset_right = 612.0
+offset_bottom = 586.0
+grow_horizontal = 2
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 67
+text = "0-100
+8 Guesses"
+horizontal_alignment = 1
+
+[node name="HardLabel" type="Label" parent="DifficultyLayer" unique_id=1379108992]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 415.0
+offset_right = 1005.0
+offset_bottom = 586.0
+grow_horizontal = 2
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 67
+text = "0-999
+10 Guesses"
+horizontal_alignment = 1
+
+[node name="EasyButton" type="Button" parent="DifficultyLayer" unique_id=1599169198]
+offset_left = 25.0
+offset_top = 329.0
+offset_right = 291.0
+offset_bottom = 399.0
+scale = Vector2(1.115095, 1.115095)
+theme = ExtResource("5_272bh")
+theme_override_colors/font_color = Color(0.5124999, 1, 0.25, 1)
+theme_override_font_sizes/font_size = 52
+text = "Easy"
+
+[node name="NormalButton" type="Button" parent="DifficultyLayer" unique_id=1467912896]
+offset_left = 425.99997
+offset_top = 329.0
+offset_right = 692.0
+offset_bottom = 399.0
+scale = Vector2(1.115095, 1.115095)
+theme = ExtResource("5_272bh")
+theme_override_colors/font_color = Color(1, 0.9875, 0.25, 1)
+theme_override_font_sizes/font_size = 52
+text = "Normal"
+
+[node name="HardButton" type="Button" parent="DifficultyLayer" unique_id=5671171]
+offset_left = 827.0
+offset_top = 329.0
+offset_right = 1093.0
+offset_bottom = 399.0
+scale = Vector2(1.115095, 1.115095)
+theme = ExtResource("5_272bh")
+theme_override_colors/font_color = Color(1, 0.2625, 0.25, 1)
+theme_override_font_sizes/font_size = 52
+text = "Hard"
+
+[node name="MenuLayer" type="CanvasLayer" parent="." unique_id=1347270276]
+
+[node name="TitleLabel" type="Label" parent="MenuLayer" unique_id=255607100]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -615.0
+offset_top = 80.0
+offset_right = 615.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 83
+text = "The Number Guessing Game"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="MenuLayer" unique_id=1833416670]
+offset_left = 302.0
+offset_top = 332.99997
+offset_right = 568.0
+offset_bottom = 402.99997
+scale = Vector2(2.013284, 2.013284)
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 52
+text = "Start"
+
+[node name="WinLayer" type="CanvasLayer" parent="." unique_id=421671068]
+visible = false
+
+[node name="Checkmark" type="Sprite2D" parent="WinLayer" unique_id=1557128531]
+position = Vector2(172, 301)
+scale = Vector2(0.07356771, 0.07356771)
+texture = ExtResource("4_lquwl")
+
+[node name="Checkmark2" type="Sprite2D" parent="WinLayer" unique_id=475502126]
+position = Vector2(961.00006, 296)
+scale = Vector2(0.07356771, 0.07356771)
+texture = ExtResource("4_lquwl")
+
+[node name="Label" type="Label" parent="WinLayer" unique_id=1400703523]
+offset_left = 386.0
+offset_top = 250.0
+offset_right = 762.0
+offset_bottom = 370.0
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 96
+text = "You Win!"
+
+[node name="LoseLayer" type="CanvasLayer" parent="." unique_id=307722463]
+visible = false
+
+[node name="Label" type="Label" parent="LoseLayer" unique_id=104677992]
+offset_left = 379.0
+offset_top = 235.0
+offset_right = 809.0
+offset_bottom = 355.0
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 96
+text = "You Lose "
+
+[node name="Badmark" type="Sprite2D" parent="LoseLayer" unique_id=159674100]
+position = Vector2(175, 300)
+scale = Vector2(0.55078125, 0.55078125)
+texture = ExtResource("4_7mycd")
+
+[node name="Badmark2" type="Sprite2D" parent="LoseLayer" unique_id=1989238919]
+position = Vector2(960.00006, 290.00003)
+scale = Vector2(0.55078125, 0.55078125)
+texture = ExtResource("4_7mycd")
+
+[node name="GuessingLayer" type="CanvasLayer" parent="." unique_id=609218458]
+visible = false
+
+[node name="Input" type="SpinBox" parent="GuessingLayer" unique_id=857342128]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.99997
+offset_top = -54.0
+offset_right = -197.97308
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.904596, 7.393527)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_272bh")
+theme_override_colors/up_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/up_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_hover_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_pressed_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/down_disabled_icon_modulate = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_constants/buttons_vertical_separation = 0
+theme_override_constants/field_and_buttons_separation = 0
+theme_override_constants/buttons_width = 0
+theme_override_constants/set_min_buttons_width_from_icons = 0
+rounded = true
+alignment = 1
+select_all_on_focus = true
+
+[node name="HintLabel" type="Label" parent="GuessingLayer" unique_id=1266945904]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_top = 69.0
+offset_right = 44.0
+offset_bottom = 288.0
+grow_horizontal = 2
+scale = Vector2(1.5586511, 1.5586511)
+size_flags_horizontal = 4
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 86
+text = "Higher
+"
+horizontal_alignment = 1
+
+[node name="GuessesRemaining" type="Label" parent="GuessingLayer" unique_id=988144612]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.99997
+offset_top = 213.00006
+offset_right = -111.0
+offset_bottom = 258.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6.2191215, 5.474138)
+size_flags_horizontal = 4
+theme = ExtResource("5_272bh")
+text = "10
+"
+horizontal_alignment = 1
+
+[node name="GuessText" type="Label" parent="GuessingLayer" unique_id=554515579]
+offset_left = 208.0
+offset_top = 425.00003
+offset_right = 704.0
+offset_bottom = 496.00003
+scale = Vector2(1.4604535, 1.4604535)
+theme = ExtResource("5_272bh")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 56
+text = "Guesses Remaining"
+
+[node name="Uparrow" type="Sprite2D" parent="GuessingLayer" unique_id=2117798154]
+visible = false
+position = Vector2(162.00002, 155.00002)
+scale = Vector2(0.49609372, 0.49609372)
+texture = ExtResource("2_1bvp3")
+
+[node name="DownArrow" type="Sprite2D" parent="GuessingLayer" unique_id=1310474156]
+visible = false
+position = Vector2(990, 156.00002)
+scale = Vector2(0.5009764, 0.5009764)
+texture = ExtResource("3_lquwl")
+
 [node name="Background" type="ColorRect" parent="." unique_id=542004997]
 offset_right = 1145.0
 offset_bottom = 650.0
+scale = Vector2(1.0391406, 1.0391406)
 color = Color(0.5679126, 0.43531835, 0.3673035, 1)
 
-[connection signal="changed" from="CanvasLayer/Input" to="NumberGuessingGame" method="_on_input_changed"]
+[node name="TryAgainButton" type="Button" parent="." unique_id=420138212]
+visible = false
+offset_left = 390.0
+offset_top = 430.0
+offset_right = 656.0
+offset_bottom = 500.0
+scale = Vector2(1.4581234, 1.4581234)
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 52
+text = "Try Again?"
+
+[node name="Target" type="Label" parent="." unique_id=1328223243]
+visible = false
+offset_left = 267.0
+offset_top = 40.0
+offset_right = 884.0
+offset_bottom = 130.0
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 72
+text = "Your number was"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="DifficultyLayer/EasyButton" to="NumberGuessingGame" method="_on_easy_button_pressed"]
+[connection signal="pressed" from="DifficultyLayer/NormalButton" to="NumberGuessingGame" method="_on_normal_button_pressed"]
+[connection signal="pressed" from="DifficultyLayer/HardButton" to="NumberGuessingGame" method="_on_hard_button_pressed"]
+[connection signal="pressed" from="MenuLayer/StartButton" to="NumberGuessingGame" method="_on_start_button_pressed"]
+[connection signal="changed" from="GuessingLayer/Input" to="NumberGuessingGame" method="_on_input_changed"]
+[connection signal="pressed" from="TryAgainButton" to="NumberGuessingGame" method="_on_try_again_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://b3klx57slj0l3"]
 
 [ext_resource type="FontFile" uid="uid://i1eetfry6s4h" path="res://soft_retro/soft_retro/Righteous/Righteous-Regular.ttf" id="1_lopid"]
-[ext_resource type="Texture2D" uid="uid://udawlj7nryla" path="res://soft_retro/art/checked.svg" id="2_k0c1y"]
+[ext_resource type="Texture2D" uid="uid://udawlj7nryla" path="res://soft_retro/soft_retro/art/checked.svg" id="2_k0c1y"]
 [ext_resource type="Texture2D" uid="uid://dl5qlemud0d4j" path="res://soft_retro/soft_retro/art/toggle_on.svg" id="2_myavk"]
 [ext_resource type="Texture2D" uid="uid://gameaex7fm1g" path="res://soft_retro/soft_retro/art/toggle_off.svg" id="3_208pi"]
 [ext_resource type="Texture2D" uid="uid://cbwip815aqfhq" path="res://soft_retro/soft_retro/art/unchecked.svg" id="3_cwkfx"]
