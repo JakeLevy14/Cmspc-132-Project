@@ -14,23 +14,29 @@ The player tries to guess a randomly generated number, with feedback provided th
 
 ---
 
-## How to Run
+## How to Run the Project
 
-1. Download and extract the ZIP file
-2. Open Godot Engine
-3. Click **Import**
-4. Select the `project.godot` file from the extracted folder
-5. Click **Import & Edit**
-6. Press **F6** to run the game
+### 1. Clone the Repository
+
+Open a terminal or command prompt and run:
+*git clone https://github.com/JakeLevy14/Cmspc-132-Project.git*
 
 ---
 
-## Plugin Setup (Important)
+### 2. Open in Godot Engine
 
-If the project does not run:
+1. Open Godot Engine  
+2. Click **Import**  
+3. Navigate to the cloned repository folder  
+4. Select the file: *project.godot*
+5. Click **Import & Edit**
 
-1. Go to **Project → Project Settings → Plugins**
-2. Ensure **P4Godot** is enabled
+---
+
+### 3. Enable Required Plugin
+
+1. Go to **Project → Project Settings → Plugins**  
+2. Enable **P4Godot**
 
 ---
 
