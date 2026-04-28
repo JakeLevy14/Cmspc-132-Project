@@ -21,24 +21,29 @@ class NumberGuessingGame(Node2D):
 		self.menu_layer = self.get_node("../MenuLayer")
 		self.difficulty_layer = self.get_node("../DifficultyLayer")
 		self.target_label = self.get_node("../Target")
+		self.previous_guesses_label = self.get_node("../GuessingLayer/PreviousGuessesLabel")
+		
+		self.previous_guesses = []
 		
 		
 
-	def _on_input_changed(self, new_value: float):
-		if not isinstance(new_value,float):
+	def _on_input_changed(self, guess: float):
+		if not isinstance(guess,float):
 			print("Invalid Input")
-		if new_value == self.target:
+		self.previous_guesses.append(int(guess))
+		self.previous_guesses_label.text = "Previous Guesses: " + str(self.previous_guesses)
+		if guess == self.target:
 			self.target_label.visible = True
 			self.try_again_button.visible = True
 			self.guessing_layer.visible = False
 			self.win_layer.visible = True
 			self.try_again_button.visible = True
 			self.target_label.text += "\n" + str(self.target)
-		elif new_value < self.target:
+		elif guess < self.target:
 			self.hint_label.text = "Higher"
 			self.up_arrow.visible = True
 			self.down_arrow.visible = False
-		elif new_value > self.target:
+		elif guess > self.target:
 			self.hint_label.text = "Lower"
 			self.up_arrow.visible = False
 			self.down_arrow.visible = True

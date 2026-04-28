@@ -297,6 +297,16 @@ position = Vector2(990, 156.00002)
 scale = Vector2(0.5009764, 0.5009764)
 texture = ExtResource("3_lquwl")
 
+[node name="PreviousGuessesLabel" type="Label" parent="GuessingLayer" unique_id=1123726180]
+offset_left = 3.0
+offset_top = 627.0
+offset_right = 290.0
+offset_bottom = 668.0
+scale = Vector2(0.47859925, 0.47859925)
+theme = ExtResource("5_272bh")
+theme_override_font_sizes/font_size = 32
+text = "Previous Guesses:  "
+
 [node name="Background" type="ColorRect" parent="." unique_id=542004997]
 offset_right = 1145.0
 offset_bottom = 650.0
